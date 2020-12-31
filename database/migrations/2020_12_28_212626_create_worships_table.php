@@ -18,6 +18,12 @@ class CreateWorshipsTable extends Migration
             $table->timestamps();
             $table->string('start_time');//Hora de inicio
             $table->string('end_time');//Hora de fin 
+
+            //Relacion con dia
+            $table->ussignedBigInteger('day_id');
+            $table->foreign('day_id')
+                ->references('id')->on('days')
+                ->onDelete('cascade');
         });
     }
 

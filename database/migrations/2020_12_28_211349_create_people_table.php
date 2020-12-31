@@ -29,6 +29,14 @@ class CreatePeopleTable extends Migration
             $table->string('instagram',25)->nullable();
             $table->string('twitter',25)->nullable();
             $table->string('facebook',35)->nullable();
+            $table->string('photo');
+            $table->string('photo_dui');
+
+            //Relacion con Estado Civil (Civil Statuses)
+            $table->ussignedBigInteger('civil_statuses_id');
+            $table->foreign('civil_statuses_id')
+                ->references('id')->on('civil_statuses')
+                ->onDelete('cascade');
         });
     }
 

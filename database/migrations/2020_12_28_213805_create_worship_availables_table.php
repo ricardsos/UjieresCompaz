@@ -16,6 +16,18 @@ class CreateWorshipAvailablesTable extends Migration
         Schema::create('worship_availables', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            //Relacion con Culto (Worship)
+            $table->ussignedBigInteger('worship_id');
+            $table->foreign('worship_id')
+                ->references('id')->on('worships')
+                ->onDelete('cascade');
+ 
+            //Relacion con Formulario (Forms)
+            $table->ussignedBigInteger('form_id');
+            $table->foreign('form_id')
+                ->references('id')->on('forms')
+                ->onDelete('cascade');
         });
     }
 

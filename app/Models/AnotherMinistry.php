@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class AnotherMinistry extends Model
 {
-    use HasFactory;
+    public function worship(){
+        return $this->belongsTo(Worship::class);
+    }
+
+    public function form(){
+        return $this->belongsTo(Form::class);
+    }
 }

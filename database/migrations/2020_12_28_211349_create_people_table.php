@@ -32,10 +32,8 @@ class CreatePeopleTable extends Migration
             $table->string('photo');
             $table->string('photo_dui');
 
-            //Relacion con Estado Civil (Civil Statuses)
-            $table->ussignedBigInteger('civil_statuses_id');
-            $table->foreign('civil_statuses_id')
-                ->references('id')->on('civil_statuses')
+            $table->foreignId('civil_statuses_id')
+                ->constraidned('civil_statuses')
                 ->onDelete('cascade');
         });
     }

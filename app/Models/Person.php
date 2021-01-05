@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Person extends Model
 {
-    use HasFactory;
+    public function civilStatus(){
+        return $this->belongsTo(CivilStatus::class);
+    }
 }

@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Managememt extends Model
 {
-    use HasFactory;
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function form(){
+        return $this->belongsTo(Form::class);
+    }
 }

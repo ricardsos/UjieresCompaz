@@ -19,10 +19,20 @@ class CreateWorshipsTable extends Migration
             $table->string('start_time');//Hora de inicio
             $table->string('end_time');//Hora de fin 
 
-            //Relacion con dia
-            $table->ussignedBigInteger('day_id');
-            $table->foreign('day_id')
-                ->references('id')->on('days')
+            //Relacion con dia 
+            $table->foreignId('day_id')
+                ->constraidned('days')
+                ->onDelete('cascade');
+
+            //Relacion con usuario
+            $table->foreignId('created_by_id')
+                ->constraidned('users')
+                ->nullable()
+                ->onDelete('cascade');
+
+            $table->foreignId('update_by_id')
+                ->constraidned('users')
+                ->nullable()
                 ->onDelete('cascade');
         });
     }

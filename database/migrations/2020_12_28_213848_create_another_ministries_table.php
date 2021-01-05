@@ -17,17 +17,15 @@ class CreateAnotherMinistriesTable extends Migration
             $table->id();
             $table->timestamps();
 
-            //Relacion con Culto (Worship)
-            $table->ussignedBigInteger('worship_id');
-            $table->foreign('worship_id')
-                ->references('id')->on('worships')
+            //Relación con culto
+            $table->foreignId('worship_id')
+                ->constraidned('worships')
                 ->onDelete('cascade');
 
-            //Relacion con Formulario (Forms)
-            $table->ussignedBigInteger('form_id');
-            $table->foreign('form_id')
-                ->references('id')->on('forms')
-                ->onDelete('cascade');
+            //Relación con formulario
+            $table->foreignId('form_id')
+            ->constraidned('forms')
+            ->onDelete('cascade');
         });
     }
 

@@ -19,16 +19,25 @@ class CreateManagememtsTable extends Migration
             $table->string('answer_date');
             $table->string('note',150)->nullable();
 
-            //Relacion con Usuario (User)
-            $table->ussignedBigInteger('user_id');
-            $table->foreign('user_id')
-                ->references('id')->on('users')
+            //Relacion con formulario
+            $table->foreignId('form_by_id')
+                ->constraidned('forms')
                 ->onDelete('cascade');
 
-            //Relacion con Formulario (Forms)
-            $table->ussignedBigInteger('form_id');
-            $table->foreign('form_id')
-                ->references('id')->on('forms')
+            //Relacion con usuario
+            $table->foreignId('user_id')
+                ->constraidned('users')
+                ->onDelete('cascade');
+
+            //Relacion con usuario
+            $table->foreignId('created_by_id')
+                ->constraidned('users')
+                ->nullable()
+                ->onDelete('cascade');
+
+            $table->foreignId('update_by_id')
+                ->constraidned('users')
+                ->nullable()
                 ->onDelete('cascade');
         });
     }

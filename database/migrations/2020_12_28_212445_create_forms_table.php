@@ -36,12 +36,21 @@ class CreateFormsTable extends Migration
             $table->string('fecha');
             $table->string('estado',10);
 
-            //Relacion con Persona (People)
-            $table->ussignedBigInteger('people_id');
-            $table->foreign('people_id')
-                ->references('id')->on('people')
+            //Relacion con persona
+            $table->foreignId('persona_id')
+                ->constraidned('people')
                 ->onDelete('cascade');
-       
+
+            //Relacion con usuario
+            $table->foreignId('created_by_id')
+                ->constraidned('users')
+                ->nullable()
+                ->onDelete('cascade');
+
+            $table->foreignId('update_by_id')
+                ->constraidned('users')
+                ->nullable()
+                ->onDelete('cascade');
         });
     }
 

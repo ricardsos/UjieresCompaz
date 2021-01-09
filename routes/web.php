@@ -17,3 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/prueba', function () {
+    return view('layouts/front_end');
+});
+
+Route::get('/seguridad', function () {
+    return view('layouts/security');
+});
+Route::get('/cultos', function () {
+    return view('user/worship');
+});

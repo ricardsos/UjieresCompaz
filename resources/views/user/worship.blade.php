@@ -4,10 +4,14 @@ Cultos
 @endsection
 
 @section('css_before')
-<link rel="stylesheet" href="{{ asset('https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css') }}">
+<!-- 
+    <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('https://cdn.datatables.net/1.10.23/css/dataTables.semanticui.min.css') }}">
+ -->
 @endsection
 
 @section('css_after')
+
 @endsection
 
 @section('content')
@@ -34,7 +38,7 @@ Cultos
         </div>
         <div class="card-block table-border-style">
             <div class="table-responsive">
-                <table class="table table-striped" id="table">
+                <table class="table table-striped table-bordered" id="tabla-dinamica">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -73,5 +77,10 @@ Cultos
 
 @section('js_after')
 <script src="{{ asset('assets/js/table.js') }}"></script>
-<script type="text/javascript" charset="utf8" src="{{ asset('https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js') }}"></script>
+<!-- 
+    <script src="{{ asset('https://code.jquery.com/jquery-3.5.1.js') }}"></script>
+    <script src="{{ asset('https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('https://cdn.datatables.net/1.10.23/js/dataTables.semanticui.min.js') }}"></script>
+    <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js') }}"></script>
+ -->
 @endsection

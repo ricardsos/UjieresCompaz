@@ -16,6 +16,7 @@ class CreateWorshipsTable extends Migration
         Schema::create('worships', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('nombre');
             $table->string('start_time');//Hora de inicio
             $table->string('end_time');//Hora de fin 
 

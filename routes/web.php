@@ -24,6 +24,11 @@ Route::get('/prueba', function () {
 Route::get('/seguridad', function () {
     return view('layouts/security');
 });
+
+Route::get('/solicitudes', function () {
+    return view('user/solicitudes');
+});
+
 Route::get('/cultos', function () {
     return view('user/worship');
 });

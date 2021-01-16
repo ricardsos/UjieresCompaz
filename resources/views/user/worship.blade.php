@@ -16,9 +16,9 @@ Cultos
 
 @section('content')
 
-<div class="col-xl-12">
+<div class="col-xl-12 col-md-6">
 <div class="page-header-title">
-    <h5 class="m-b-10">Horarios de culto</h5>
+    <h5 class="m-b-10">Cultos</h5>
 </div>
 <ul class="breadcrumb">
     <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
@@ -26,53 +26,134 @@ Cultos
     <li class="breadcrumb-item"><a href="javascript:">Basic Tables</a></li>
 </ul>
 
-<!-- [ stiped-table ] start -->
-    <div class="card">
+
+<!--[ Recent Users ] start-->
+    <div class="card Recent-Users">
         <div class="card-header">
-            <h5>Cultos</h5>
-            <a style="box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);" href="#"
-                   class="fa-pull-right label btn-primary text-white f-12 badge-pill" data-toggle="tooltip"
-                   data-placement="top" title="Nuevo">
-                    <span class="pcoded-micon"><i class="feather icon-plus"></i></span>
-            </a>
+            <h5>Recent Users</h5> 
         </div>
-        <div class="card-block table-border-style">
-            <div class="table-responsive">
-                <table class="table table-striped table-bordered" id="tabla-dinamica">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class="card-block px-3 py-3">
+            
+                <div class="table-responsive">
+        <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Hora de inicio</th>
+                    <th>Hora de finalización</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h6 class="m-0"><span class="pcoded-micon"><i class="feather icon-calendar f-20 text-c-blue" style="padding:5px;" ></i></span>Albert Andersen</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">Jumps over the lazy</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">2:37 PM</h6>
+                        </td>
+                        <td class="text-center">
+                        <a href="#" class="label btn-info text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Editar">
+                                        <span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Editar</span>-->
+                        </a>
+
+                        <a href="#" class="label btn-danger text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Eliminar">
+                                        <span class="pcoded-micon"><i class="feather icon-trash-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Eliminar</span>-->
+                        </a>
+                                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="m-0"><span class="pcoded-micon"><i class="feather icon-calendar f-20 text-c-blue" style="padding:5px;" ></i></span>Ida Jorgensen</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">The quick brown fox</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">3:28 PM</h6>
+                        </td>
+                        <td class="text-center">
+                        <a href="#" class="label btn-info text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Editar">
+                                        <span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Editar</span>-->
+                        </a>
+
+                        <a href="#" class="label btn-danger text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Eliminar">
+                                        <span class="pcoded-micon"><i class="feather icon-trash-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Eliminar</span>-->
+                        </a>
+                                                
+                        </td>
+                    <tr>
+                        <td>
+                            <h6 class="m-0"><span class="pcoded-micon"><i class="feather icon-calendar f-20 text-c-blue" style="padding:5px;" ></i></span>Ida Jorgensen</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">The quick brown fox</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">4:28 PM</h6>
+                        </td>
+                        <td class="text-center">
+                        <a href="#" class="label btn-info text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Editar">
+                                        <span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Editar</span>-->
+                        </a>
+
+                        <a href="#" class="label btn-danger text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Eliminar">
+                                        <span class="pcoded-micon"><i class="feather icon-trash-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Eliminar</span>-->
+                        </a>
+                                                
+                        </td>
+                    <tr>
+                        <td>
+                            <h6 class="m-0"><span class="pcoded-micon"><i class="feather icon-calendar f-20 text-c-blue" style="padding:5px;" ></i></span>Silje Larsen</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">Dog the quick brown</h6>
+                        </td>
+                        <td>
+                            <h6 class="m-0">10:23 AM</h6>
+                        </td>
+                        <td class="text-center">
+                        <a href="#" class="label btn-info text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Editar">
+                                        <span class="pcoded-micon"><i class="feather icon-edit-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Editar</span>-->
+                        </a>
+
+                        <a href="#" class="label btn-danger text-white f-12" data-toggle="tooltip"
+                                       data-placement="top" title="Eliminar">
+                                        <span class="pcoded-micon"><i class="feather icon-trash-2"></i></span>
+                                        <!--<span class="pcoded-mtext">Eliminar</span>-->
+                        </a>
+                                                
+                        </td>
+                </tbody>
+            </table>
         </div>
+        
+                    
+                </div>
+            
     </div>
 </div>
-<!-- [ stiped-table ] end -->
+<!--[ Recent Users ] end-->
+
 @endsection
 
 @section('js_after')

@@ -1,6 +1,6 @@
 @extends('layouts.front_end')
 @section('section')
-Cultos
+Solicitudes
 @endsection
 
 @section('css_before')
@@ -18,7 +18,7 @@ Cultos
 
 <div class="col-xl-12 col-md-6">
 <div class="page-header-title">
-    <h5 class="m-b-10">Horarios de culto</h5>
+    <h5 class="m-b-10">Solicitudes</h5>
 </div>
 <ul class="breadcrumb">
     <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>

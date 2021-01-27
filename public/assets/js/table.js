@@ -1,3 +1,4 @@
-$(document).ready(function() {
-    $('#tabla-dinamica').DataTable();
-} );
+$('#input_starttime').pickatime({
+    // 12 or 24 hour
+    twelvehour: true,
+    });

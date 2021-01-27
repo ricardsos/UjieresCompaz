@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Worship;
+use App\Models\Day;
 use Illuminate\Http\Request;
 
 class WorshipController extends Controller
@@ -14,7 +15,8 @@ class WorshipController extends Controller
      */
     public function index()
     {
-        //
+        $worships = Worship::all();
+        return view('user/worship',compact('worships'));
     }
 
     /**
@@ -24,7 +26,8 @@ class WorshipController extends Controller
      */
     public function create()
     {
-        //
+        $days = Day::all();
+        return view('user/createWorship',compact('days'));
     }
 
     /**
@@ -35,7 +38,13 @@ class WorshipController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Worship::create([
+            'nombre' => request('nombre'),
+            'day_id' => request('dia'),
+            'start_time' => request('horaInicio'),
+            'end_time' => request('horaFin')
+        ]);
+        
     }
 
     /**

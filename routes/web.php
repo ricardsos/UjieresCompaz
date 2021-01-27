@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WorshipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,10 @@ Route::get('/solicitudes', function () {
     return view('user/solicitudes');
 });
 
-Route::get('/cultos', function () {
-    return view('user/worship');
-});
+#Rutas de Worship (Cultos)
+Route::get('/cultos','WorshipController@index')->name('showWorships');
+Route::get('/cultos/crearCulto','WorshipController@create')->name('createWorships');
+Route::post('/cultos/storeCulto','WorshipController@store')->name('storeWorships');
+
+#Rutas formulario
+Route::view('/formulario','form/form');

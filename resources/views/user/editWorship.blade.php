@@ -31,12 +31,6 @@ Cultos
     <div class="card Recent-Users">
         <div class="card-header">
             <h5>Recent Users</h5> 
-            <a style="box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);" href="{{ route('createWorships') }}"
-                   class="fa-pull-right label btn-primary text-white f-12 badge-pill" data-toggle="tooltip"
-                   data-placement="top" title="Nuevo">
-                    <span class="pcoded-micon"><i class="feather icon-plus"></i></span>
-                    <!--<span class="pcoded-mtext">Nuevo</span>-->
-            </a>
         </div>
             <div class="card-block px-3 py-3">
             
@@ -59,13 +53,13 @@ Cultos
                             <h6 class="m-0"><span class="pcoded-micon"><i class="feather icon-calendar f-20 text-c-blue" style="padding:5px;" ></i></span>{{ $worship->nombre }}</h6>
                         </td>
                         <td>
-                            <h6 class="m-0">{{ $worship->day->name}}</h6>
+                            <h6 class="m-0">{{ $worship->nombre }}</h6>
                         </td>
                         <td>
-                            <h6 class="m-0">{{ $worship->start_time }}</h6>
+                            <h6 class="m-0">{{ $worship->day_id }}</h6>
                         </td>
                         <td>
-                            <h6 class="m-0">{{ $worship->end_time }}</h6>
+                            <h6 class="m-0">2:37 PM</h6>
                         </td>
                         <td class="text-center">
                         <a href="#" class="label btn-info text-white f-12" data-toggle="tooltip"

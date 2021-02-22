@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //Al cargar el formulario se ocultan los campos
     $(".haceCuantoTiempo").hide();
     $(".haceCuantoTiempoBautizo").hide();
     $(".cualMinisterio").hide();
@@ -8,6 +9,7 @@ $(document).ready(function(){
     $(".nombreAnfitrion").hide();
     $(".conyugue").hide();
 
+    //Muestra el campo del nombre del conyugue si el valor es Casad@
     $("#estadoCivil").click(function(){
         var e = document.getElementById("estadoCivil");
         var text=e.options[e.selectedIndex].text;
@@ -19,7 +21,7 @@ $(document).ready(function(){
         }
     });
 
-    
+    //Muestra los campos de acuerdo al valor del radiobutton
     $("#cristoSi").click(function(){
         var cristo = $(this).attr("valor");
         if (cristo == "si"){

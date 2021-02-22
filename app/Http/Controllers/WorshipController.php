@@ -38,6 +38,7 @@ class WorshipController extends Controller
      */
     public function store(Request $request)
     {
+        
         Worship::create([
             'nombre' => request('nombre'),
             'day_id' => request('dia'),

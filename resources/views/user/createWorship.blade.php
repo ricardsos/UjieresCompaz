@@ -19,7 +19,7 @@ Crear horario
 </div>
 <ul class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{route ('showWorships')}}"><i class="feather icon-home"></i></a></li>
-    <li class="breadcrumb-item"><a href="{{route ('showWorships')}}">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="{{route ('showWorships')}}">Cultos</a></li>
     <li class="breadcrumb-item"><a href="javascript:">Crear</a></li>
 </ul>
 
@@ -36,11 +36,11 @@ Crear horario
                     @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1"><b>Nombre</b></label>
-                            <input type="text" class="form-control" name="nombre"  placeholder="Ej: Primer culto">
+                            <input type="text" class="form-control" name="nombre"  placeholder="Ej: Primer culto" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1"><b>Día</b></label>
-                            <select class="form-control" name="dia">
+                            <select class="form-control" name="dia" required>
                                 @forelse($days as $day)
                                     <option value="{{ $day->id }}"> {{ $day->name }}</option>
                                 @empty
@@ -52,11 +52,12 @@ Crear horario
                 <div class="col-md-6">
                         <div class="form-group">
                             <label><b>Hora de inicio</b></label>
-                            <input type="time" class="form-control" name="horaInicio" placeholder="Text">
+                            <input type="time" class="form-control" name="horaInicio" placeholder="Text" required>
+                            
                         </div>
                         <div class="form-group">
                             <label><b>Hora de finalización</b></label>
-                            <input type="time" class="form-control" name="horaFin" placeholder="Text">
+                            <input type="time" class="form-control" name="horaFin" placeholder="Text" required>
                         </div>                        
                     </form>
                 </div>
@@ -71,6 +72,6 @@ Crear horario
 @endsection
 
 @section('js_after')
-
+<script src="{{ asset('assets/js/timepicker.js') }}"></script>
 
 @endsection

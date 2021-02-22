@@ -29,29 +29,29 @@ Formulario
                 <h3 class="mb-4">SOLICITUD DE INGRESO AL MINISTERIO DE UJIERES</h3>
                     <form>
                         <div class="form-group text-left">
-                            <label><b>Nombre completo</b></label>
-                            <input type="text" class="form-control" name="nombreCompleto" placeholder="Ej: Juan Roberto Quito Mercedez">
+                            <label><b>Nombre completo</b></label><spam style="color: red;">*</spam>
+                            <input type="text" class="form-control" name="nombreCompleto" placeholder="Ej: Juan Roberto Quito Mercedez" required>
                         </div>
 
                         <div class="row ">
                             <div class="col-md-6">
                                 
                                     <div class="form-group text-left">
-                                        <label><b>Edad</b></label>
-                                        <input type="number" class="form-control" name="edad" placeholder="Ej: 26">
+                                        <label><b>Edad</b></label><spam style="color: red;">*</spam>
+                                        <input type="number" class="form-control" name="edad" placeholder="Ej: 26" required>
                                     </div>
                             </div>
                             <div class="col-md-6">
                                     <div class="form-group text-left">
-                                        <label><b>Ocupación</b></label>
-                                        <input type="text" class="form-control" name="ocupacion" placeholder="Ej: Abogado">
+                                        <label><b>Ocupación</b></label><spam style="color: red;">*</spam>
+                                        <input type="text" class="form-control" name="ocupacion" placeholder="Ej: Abogado" required>
                                     </div>
                             </div>
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>Estado civil:</b></label>
-                            <select class="form-control" name="estadoCivil" id="estadoCivil">
+                            <label><b>Estado civil:</b></label><spam style="color: red;">*</spam>
+                            <select class="form-control" name="estadoCivil" id="estadoCivil" required>
                                 <option>Solter@</option>
                                 <option>Casad@</option>
                                 <option>Divorciad@</option>
@@ -66,13 +66,19 @@ Formulario
 
                         <div class="form-group text-left">
                             <label><b>Correo electrónico</b></label>
-                            <input type="email" class="form-control" name="correo" id="correo" placeholder="Ej: Marta Gabriela Navas Ponce">
+                            <input type="email" class="form-control" name="correo" id="correo" placeholder="">
                         </div>
                         <div class="form-group text-left">
-                            <label><b>Dirección</b></label>
-                            <textarea class="form-control" name="direccion" id="direccion" rows="3"></textarea>
+                            <label><b>Dirección</b></label><spam style="color: red;">*</spam>
+                            <textarea class="form-control" name="direccion" id="direccion" rows="3" required></textarea>
                         </div>
                         <div class="row ">
+                            <div class="col-md-4">
+                                <div class="form-group text-left">
+                                    <label><b>Tel. celular</b></label><spam style="color: red;">*</spam>
+                                    <input type="number" class="form-control" name="telCelular" placeholder="" required>
+                                </div>
+                            </div>
                             <div class="col-md-4">
                                 <div class="form-group text-left">
                                     <label><b>Tel. casa</b></label>
@@ -83,12 +89,6 @@ Formulario
                                 <div class="form-group text-left">
                                     <label><b>Tel. oficina</b></label>
                                     <input type="number" class="form-control" name="telOficina" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group text-left">
-                                    <label><b>Tel. celular</b></label>
-                                    <input type="number" class="form-control" name="telCelular" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -123,10 +123,10 @@ Formulario
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>¿Ha aceptado a Cristo Jesús en su corazón?</b></label>
+                            <label><b>¿Ha aceptado a Cristo Jesús en su corazón?</b></label><spam style="color: red;">*</spam>
                             <br>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="cristoSi" name="cristoSi" class="custom-control-input cristoSi" valor="si">
+                                <input type="radio" id="cristoSi" name="cristoSi" class="custom-control-input cristoSi" valor="si" required>
                                 <label class="custom-control-label" for="cristoSi">Si</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
@@ -141,10 +141,10 @@ Formulario
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>¿Es bautizado en agua?</b></label>
+                            <label><b>¿Es bautizado en agua?</b></label><spam style="color: red;">*</spam>
                             <br>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="bautizadoSi" name="bautizadoSi" class="custom-control-input bautizadoSi" valor="si">
+                                <input type="radio" id="bautizadoSi" name="bautizadoSi" class="custom-control-input bautizadoSi" valor="si" required>
                                 <label class="custom-control-label" for="bautizadoSi">Si</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
@@ -159,15 +159,15 @@ Formulario
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>¿Cuánto tiempo tiene de congregarse en Iglesia Compaz?</b></label>
-                            <input type="text" class="form-control" name="cuantoTiempoCongregarse" placeholder="Ej: 1 año, 5 meses">
+                            <label><b>¿Cuánto tiempo tiene de congregarse en Iglesia Compaz?</b></label><spam style="color: red;">*</spam>
+                            <input type="text" class="form-control" name="cuantoTiempoCongregarse" placeholder="Ej: 1 año, 5 meses" required>
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>Ha llenado la hoja de membresía de la Iglesia</b></label>
+                            <label><b>Ha llenado la hoja de membresía de la Iglesia</b></label><spam style="color: red;">*</spam>
                             <br>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="membresiaSi" name="membresiaSi" class="custom-control-input">
+                                <input type="radio" id="membresiaSi" name="membresiaSi" class="custom-control-input" required>
                                 <label class="custom-control-label" for="membresiaSi">Si</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
@@ -182,10 +182,10 @@ Formulario
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>Sirve usted en otro ministerio de Iglesia Compaz</b></label>
+                            <label><b>Sirve usted en otro ministerio de Iglesia Compaz</b></label><spam style="color: red;">*</spam>
                             <br>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="ministerioSi" name="ministerioSi" class="custom-control-input" valor="si">
+                                <input type="radio" id="ministerioSi" name="ministerioSi" class="custom-control-input" valor="si" required>
                                 <label class="custom-control-label" for="ministerioSi">Si</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
@@ -196,7 +196,7 @@ Formulario
 
                         <div class="form-group text-left cualMinisterio" >
                             <label><b>¿Cuál?</b></label>
-                            <input type="text" class="form-control" name="cualMinisterio" placeholder="Ej: 1 año, 5 meses">
+                            <input type="text" class="form-control" name="cualMinisterio" placeholder="Ej: Parqueo, Producción">
                         </div>
 
                         <div class="form-group text-left diaOtroMinisterio">
@@ -226,10 +226,10 @@ Formulario
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>Ha recibido el bautísmo del espíritu santo</b></label>
+                            <label><b>Ha recibido el bautísmo del espíritu santo</b></label><spam style="color: red;">*</spam>
                             <br>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="espirituSi" name="espirituSi" class="custom-control-input">
+                                <input type="radio" id="espirituSi" name="espirituSi" class="custom-control-input" required>
                                 <label class="custom-control-label" for="espirituSi">Si</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
@@ -239,15 +239,15 @@ Formulario
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>Qué fue lo que lo motivo a usted servir como Ujier</b></label>
-                            <textarea class="form-control" name="direccion" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label><b>Qué fue lo que lo motivo a usted servir como Ujier</b></label><spam style="color: red;">*</spam>
+                            <textarea class="form-control" name="motivoParaServir" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         </div>
 
                         <div class="form-group text-left">
-                            <label><b>Asiste usted a una Celupaz</b></label>
+                            <label><b>Asiste usted a una Celupaz</b></label><spam style="color: red;">*</spam>
                             <br>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="celulaSi" name="celulaSi" class="custom-control-input" valor="si">
+                                <input type="radio" id="celulaSi" name="celulaSi" class="custom-control-input" valor="si" required>
                                 <label class="custom-control-label" for="celulaSi">Si</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
@@ -268,12 +268,12 @@ Formulario
                             <input type="text" class="form-control" name="nombreAnfitrion" placeholder="">
                         </div>
                         <div class="form-group text-left">
-                            <label><b>¿Quién le habló de este ministerio?</b></label>
-                            <input type="text" class="form-control" name="nombreAnfitrion" placeholder="">
+                            <label><b>¿Quién le habló de este ministerio?</b></label><spam style="color: red;">*</spam>
+                            <input type="text" class="form-control" name="nombreAnfitrion" placeholder="" required>
                         </div>
                         <div class="form-group text-left">
-                            <label><b>Persona que pueda dar referencia de usted:</b></label>
-                            <input type="text" class="form-control" name="nombreAnfitrion" placeholder="">
+                            <label><b>Persona que pueda dar referencia de usted:</b></label><spam style="color: red;">*</spam>
+                            <input type="text" class="form-control" name="nombreAnfitrion" placeholder="" required>
                         </div>
                         
                         <div class="form-group text-left">
@@ -287,7 +287,7 @@ Formulario
                             <br>
                             <input type="file"  name="nombreAnfitrion" accept="image/png, image/jpeg">
                         </div>
-                        <button class="btn btn-primary shadow-2 mb-4">Sign up</button>
+                        <button class="btn btn-primary shadow-2 mb-4">Guardar</button>
                         
                     </form>
             </div>
